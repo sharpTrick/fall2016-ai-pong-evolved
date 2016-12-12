@@ -122,17 +122,17 @@ public class GameModel implements Cloneable{
         return ballCount;
     }
 
-    public int getTotalArgCount(){
-        return BALL_ARG_COUNT *ballCount+PADDLE_ARG_COUNT*paddleCount;
-    }
-
-    public int getStartBallIndex() {
-        return startBallIndex;
-    }
-
-    public double[] getRef(){
-        return array;
-    }
+//    public int getTotalArgCount(){
+//        return BALL_ARG_COUNT *ballCount+PADDLE_ARG_COUNT*paddleCount;
+//    }
+//
+//    public int getStartBallIndex() {
+//        return startBallIndex;
+//    }
+//
+//    public double[] getRef(){
+//        return array;
+//    }
 
     public double getBallValue(int ball, int valueType){
         return array[startBallIndex+ball* BALL_ARG_COUNT +valueType];
@@ -157,13 +157,11 @@ public class GameModel implements Cloneable{
         array[paddle*PADDLE_ARG_COUNT+valueType]=value;
     }
 
-    public void setPaddleVel(int paddle, double value){
-        PADDLE_TYPE paddleType = getPaddleType(paddle);
-        int valueType = paddleType==PADDLE_TYPE.VERTICAL?PADDLE_VEL_Y:PADDLE_VEL_X;
-        setPaddleValue(paddle, valueType,value);
-    }
-
-
+//    public void setPaddleVel(int paddle, double value){
+//        PADDLE_TYPE paddleType = getPaddleType(paddle);
+//        int valueType = paddleType==PADDLE_TYPE.VERTICAL?PADDLE_VEL_Y:PADDLE_VEL_X;
+//        setPaddleValue(paddle, valueType,value);
+//    }
 
     @Override
     public GameModel clone() {
